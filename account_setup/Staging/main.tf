@@ -1,5 +1,5 @@
 module "eks" {
-  source         = "../aws_modules/eks"
+  source         = "../../aws_modules/eks"
   aws_access_key = var.aws_access_key
   aws_secret_key = var.aws_secret_key
   region         = var.region
@@ -11,12 +11,12 @@ module "eks" {
 }
 
 
-# module "argo_cd" {
-#   source                              = "../aws_modules/argo"
-#   kubernetes_custom_resources_enabled = var.kubernetes_custom_resources_enabled
-#   root_app_repository_url             = var.root_app_repository_url
-#   root_app_repository_ref             = var.root_app_repository_ref
-# }
+ module "argo_cd" {
+   source                              = "../../aws_modules/argo"
+   kubernetes_custom_resources_enabled = var.kubernetes_custom_resources_enabled
+   root_app_repository_url             = var.root_app_repository_url
+   root_app_repository_ref             = var.root_app_repository_ref
+ }
 
 terraform {
   required_providers {

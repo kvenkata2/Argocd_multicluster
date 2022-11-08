@@ -130,5 +130,5 @@ variable "root_app_chart_values" {
 }
 
 variable "subnet_ids" {
-  dedefault = ["subnet-0d4ddb2785a4ee92d", "subnet-02baf1a3aecca3cf6"]
+  default = ["subnet-0d4ddb2785a4ee92d", "subnet-02baf1a3aecca3cf6"]
 }
